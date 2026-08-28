@@ -18,7 +18,7 @@ Programmateur horaire connecté basé sur ESP32, pilotant **4 relais indépendan
 
 ## Fonctionnalités
 
-- **4 relais indépendants**, chacun configurable individuellement.
+- **4 relais indépendants**, Configuration Imposée par la Carte R1-GPIO32 R2-GPIO33 R3-GPIO25 R4-GPIO26.
 - **Deux modes par relais** :
   - **Automatique** : le relais s'active/se désactive selon une plage horaire programmée (`HH:MM` → `HH:MM`), y compris les plages traversant minuit (ex. 22:00 → 06:00).
   - **Manuel** : forçage ON/OFF direct par l'utilisateur, indépendamment de l'horloge.
