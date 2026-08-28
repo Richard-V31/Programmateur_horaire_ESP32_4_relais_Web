@@ -1,0 +1,6 @@
+#define SECRET_SSID  "Box 1"
+#define SECRET_PASS  "Pass 1"
+#define SECRET_SSID2 "Box 2"
+#define SECRET_PASS2 "Pass 2"
+//#define SECRET_SSID3 "Nouvelle Box"
+//#define SECRET_PASS3 "Mot de passe"
