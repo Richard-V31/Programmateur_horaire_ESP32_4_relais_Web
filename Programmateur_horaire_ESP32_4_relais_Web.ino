@@ -117,10 +117,12 @@ body{
 .quick{display:grid; grid-template-columns:repeat(3,1fr); gap:6px;}
 .qbtn{
   border:1px solid var(--line); background:var(--card); color:var(--txt);
-  border-radius:12px; padding:8px 4px; font-size:.66rem; font-weight:700;
+/* 🚩Taille texte Tout ON Tout OFF et AUTO-> font-size:.66rem */
+  border-radius:12px; padding:8px 4px; font-size:.85rem; font-weight:700;
   display:flex; flex-direction:column; align-items:center; gap:3px; cursor:pointer;
 }
-.qbtn span.ic{font-size:1rem;}
+/* 🚩Taille des pastilles rouge et verte Tout ON Tout OFF*/
+.qbtn span.ic{font-size:1.6rem;}
 .qbtn:active{transform:scale(.96);}
 .qbtn.on:active, .qbtn.on{border-color:rgba(52,211,153,.5);}
 .qbtn.off:active, .qbtn.off{border-color:rgba(251,113,133,.5);}
@@ -133,25 +135,27 @@ body{
   border-left:3px solid var(--accent);
 }
 .row-top{display:flex; align-items:center; gap:8px;}
-/* Taille et couleur de Programmation 1 a 4 */
-.name{font-size:1rem; font-weight:700; flex:1; min-width:0; color:#ffffff;}
-/* Taille et couleur de Relais 1 a 4 */
-.name small{display:block; font-size:.82rem; font-weight:500; color:#ffffff;}
+/* 🚨Taille couleur et position de Programmation 1 a 4 */
+.name{font-size:1rem; font-weight:700; flex:1; min-width:0; color:#ffffff;text-align:center;}
+/* 🚨Taille  couleur et position de Relais 1 a 4 */
+.name small{display:block; font-size:.99rem; font-weight:500; color:#ffffff; text-align:center;}
 .badge{font-size:.95rem; font-weight:900; min-width:34px; text-align:center;}
 .badge.on{color:var(--ok); text-shadow:0 0 14px rgba(52,211,153,.5);}
 .badge.off{color:#fb7185; text-shadow:0 0 12px rgba(251,113,133,.35);}
 .badge.und{color:var(--off);}
 
 
-/* VOYANT ROND ON/OFF (texte cerclé, fond coloré) */
+/* 🚨VOYANT ROND ON/OFF (texte cerclé, fond coloré) */
 .status-dot{
   width:34px; height:34px; border-radius:50%; flex-shrink:0; cursor:default;
   display:flex; align-items:center; justify-content:center;
-  font-size:.6rem; font-weight:900; letter-spacing:.02em; color:#fff;
+  /* 🚩Taille du texte ON ou OFF->font-size:.9rem */
+  font-size:.9rem; font-weight:900; letter-spacing:.02em; color:#fff;
   border:1px solid rgba(255,255,255,.15); transition:background .2s, box-shadow .2s;
 }
-.status-dot.on{background:rgba(52,211,153,.6); box-shadow:0 0 14px rgba(52,211,153,.7); border-color:rgba(52,211,153,.9);}
-.status-dot.off{background:rgba(251,113,133,.6); box-shadow:0 0 12px rgba(251,113,133,.6); border-color:rgba(251,113,133,.9);}
+/* 🚩Couleur du fond du bouton rand ON et OFF dans rgba(52,211,153,.6)*/
+.status-dot.on{background:rgba(52,211,153,.9); box-shadow:0 0 14px rgba(52,211,153,.7); border-color:rgba(52,211,153,.9);}
+.status-dot.off{background:rgba(237,92,92,0.9); box-shadow:0 0 12px (237,92,92,0.7); border-color:rgba(237,92,92,0.9);}
 .status-dot.und{background:rgba(255,255,255,.06); box-shadow:none; color:var(--sub);}
 
 .toggle{position:relative; width:38px; height:21px; flex-shrink:0;}
@@ -160,15 +164,17 @@ body{
 .toggle .track::before{content:""; position:absolute; height:15px; width:15px; left:3px; top:3px; background:#fff; border-radius:50%; transition:transform .2s; box-shadow:0 1px 3px rgba(0,0,0,.4);}
 .toggle input:checked + .track{background:var(--accent);}
 .toggle input:checked + .track::before{transform:translateX(17px);}
-/* couleur du texte AUTO ou MANUEL */
-.mtxt{font-size:.75rem; color:#ffffff; text-align:center; margin-top:2px; text-transform:uppercase; letter-spacing:.04em;}
+/* 🚨couleur du texte AUTO ou MANUEL */
+.mtxt{font-size:.90rem; color:#ffffff; text-align:center; margin-top:2px; text-transform:uppercase; letter-spacing:.04em;}
 
 .row-body{display:flex; align-items:center; gap:8px; margin-top:8px;}
 .tfield{flex:1; display:flex; flex-direction:column; gap:2px;}
+/* 🚨 Taille du texte Debut et Fin*/
 /* Ancien .tfield label{font-size:.58rem; text-transform:uppercase; color:var(--sub); letter-spacing:.05em;} */
-.tfield label{font-size:.58rem; text-transform:uppercase; color:#ffffff; letter-spacing:.05em;}
+.tfield label{font-size:.80rem; text-transform:uppercase; color:#ffffff; letter-spacing:.05em;}
 input[type="time"]{
-  width:100%; padding:6px 6px; font-size:.95rem; color:var(--txt); /* taille texte heure 85rem*/
+  /*🚨AGRANDIR TEXTE HEURE PROG font-size:.78rem; et audessus de 100-> 1.2; */
+  width:100%; padding:6px 6px; font-size:1.4rem; color:var(--txt); 
   background:rgba(255,255,255,.06); border:1px solid var(--line); border-radius:9px; color-scheme:dark;
 }
 input[type="time"]:focus{outline:none; border-color:var(--accent);}
@@ -176,16 +182,17 @@ input[type="time"]:focus{outline:none; border-color:var(--accent);}
   align-self:flex-end; border:none; cursor:pointer; border-radius:9px; padding:7px 10px;
   background:var(--accent); color:#0b0d12; font-size:.9rem; font-weight:800; line-height:1;
 }
+/*  🚨Taille du texte ⚡ Forcer ON / OFF -> font-size:.9rem */
 .forcebtn{
   flex:1; border:1px solid var(--line); background:rgba(255,255,255,.05); color:var(--txt);
-  border-radius:9px; padding:7px 10px; font-size:.74rem; font-weight:700; cursor:pointer;
+  border-radius:9px; padding:7px 10px; font-size:1.2rem; font-weight:700; cursor:pointer;
 }
 .forcebtn:active{background:rgba(var(--accent-rgb),.18); border-color:var(--accent);}
 .msg{font-size:.6rem; color:#4ade80; height:12px; margin:2px 0 0; text-align:right;}
 
 .foot{text-align:center; font-size:.6rem; color:var(--sub); padding:4px 0 0;}
 
-/* BOUTON INFO 🛜  width:30px; height:30px  Largeur Hauteur */
+/* 🚨BOUTON INFO 🛜  width:30px; height:30px  Largeur Hauteur */
 .info-btn{
   width:35px; height:35px; border-radius:50%; border:1px solid var(--line);
   background:var(--card); color:var(--txt); font-size:.85rem; font-weight:800;
@@ -261,8 +268,8 @@ input[type="time"]:focus{outline:none; border-color:var(--accent);}
 
 <script>
 const RELAYS = [
-  {id:"PR1", name:"Programmation 1", sub:"Relais 1", color:"#f59e0b", rgb:"245,158,11"},
-  {id:"PR2", name:"Programmation 2", sub:"Relais 2", color:"#06b6d4", rgb:"6,182,212"},
+  {id:"PR1", name:"Programmation 1", sub:"Cuisine", color:"#f59e0b", rgb:"245,158,11"},
+  {id:"PR2", name:"Programmation 2", sub:"Portail", color:"#06b6d4", rgb:"6,182,212"},
   {id:"PR3", name:"Programmation 3", sub:"Relais 3", color:"#0CE892", rgb:"0,255,0"},
   {id:"PR4", name:"Programmation 4", sub:"Relais 4", color:"#ef4444", rgb:"239,68,68"},
 ];
